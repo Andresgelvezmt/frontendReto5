@@ -1,7 +1,7 @@
 function autoInicioCategoria(){
     console.log("se esta ejecutando")
     $.ajax({
-        url:"http://155.248.202.105:8080/api/Category/all",
+        url:"http://144.22.57.233:8080/api/Category/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -18,7 +18,7 @@ function autoInicioCategoria(){
 //Manejador GET
 function traerInformacionDisfraz() {
     $.ajax({
-        url:"http://155.248.202.105:8080/api/Costume/all",
+        url:"http://144.22.57.233:8080/api/Costume/all",
         //url: "http://localhost:8080/api/Skate/all",
         type: "GET",
         datatype: "JSON",
@@ -61,7 +61,7 @@ function pintarRespuestaDisfraz(response){
 function cargarDatosDisfraz(id) {
     $.ajax({
         dataType: 'json',
-        url:"http://155.248.202.105:8080/api/Costume/"+id,
+        url:"http://144.22.57.233:8080/api/Costume/"+id,
         //url: "http://localhost:8080/api/Skate/" + id,
         type: 'GET',
 
@@ -103,7 +103,7 @@ function agregarDisfraz() {
             $.ajax({
                 type: "POST",
                 contentType: "application/json",
-                url:"http://155.248.202.105:8080/api/Costume/save",
+                url:"http://144.22.57.233:8080/api/Costume/save",
                 //url: "http://localhost:8080/api/Skate/save",
                 data: dataToSend,
                 datatype: 'json',
@@ -141,7 +141,7 @@ console.log(dataToSend);
         {
             dataType: 'json',
             data: dataToSend,
-            url:"http://155.248.202.105:8080/api/Costume/"+idElemento,
+            url:"http://144.22.57.233:8080/api/Costume/"+idElemento,
             //url: "http://localhost:8080/api/Skate/" + idElemento,
             type: 'DELETE',
             contentType: "application/JSON",
@@ -180,7 +180,7 @@ function actualizar(idElemento) {
             datatype: 'json',
             data: dataToSend,
             contentType: "application/JSON",
-            url:"http://155.248.202.105:8080/api/Costume/update",
+            url:"http://144.22.57.233:8080/api/Costume/update",
             //url: "http://localhost:8080/api/Skate/update",
             type: "PUT",
 
